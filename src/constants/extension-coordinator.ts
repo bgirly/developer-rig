@@ -1,7 +1,7 @@
 export enum ExtensionAnchor {
   Hidden = 'hidden',
   Panel = 'panel',
-  Overlay = 'videoOverlay',
+  VideoOverlay = 'videoOverlay',
   Component = 'component',
 }
 
@@ -55,11 +55,11 @@ export enum ExtensionAction {
 }
 
 export enum ExtensionViewType {
-  Component = "component",
-  Config = "config",
-  Hidden = "hidden",
-  LiveConfig = "liveConfig",
-  Mobile = "mobile",
-  Panel = "panel",
-  VideoOverlay = "videoOverlay",
+  Component = 'component',
+  Config = 'config',
+  Hidden = 'hidden',
+  LiveConfig = 'liveConfig',
+  Mobile = 'mobile',
+  Panel = 'panel',
+  VideoOverlay = 'videoOverlay',
 }
