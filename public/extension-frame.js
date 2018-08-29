@@ -14,7 +14,7 @@ function proxyIframeEvent(event) {
       break;
     case 'extension-frame-authorize':
       event.source.postMessage({
-        action: "extension-frame-authorize-response",
+        action: 'extension-frame-authorize-response',
         response: {
           channelId: frameChannelId,
           clientId: parameters.extension.clientId,
