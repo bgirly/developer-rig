@@ -388,7 +388,7 @@ ShallowWrapper {
                     className="dialog__divider"
           />
           <div
-                    className="dialog_bottom-bar"
+                    className="dialog__bottom-bar"
           >
                     <div
                               className="bottom-bar__save"
@@ -499,7 +499,7 @@ ShallowWrapper {
               className="dialog__divider"
 />,
             <div
-              className="dialog_bottom-bar"
+              className="dialog__bottom-bar"
 >
               <div
                             className="bottom-bar__save"
@@ -887,7 +887,7 @@ ShallowWrapper {
                    Cancel 
 </div>,
               ],
-              "className": "dialog_bottom-bar",
+              "className": "dialog__bottom-bar",
             },
             "ref": null,
             "rendered": Array [
@@ -1011,7 +1011,7 @@ ShallowWrapper {
                         className="dialog__divider"
             />
             <div
-                        className="dialog_bottom-bar"
+                        className="dialog__bottom-bar"
             >
                         <div
                                     className="bottom-bar__save"
@@ -1122,7 +1122,7 @@ ShallowWrapper {
                 className="dialog__divider"
 />,
               <div
-                className="dialog_bottom-bar"
+                className="dialog__bottom-bar"
 >
                 <div
                                 className="bottom-bar__save"
@@ -1510,7 +1510,7 @@ ShallowWrapper {
                      Cancel 
 </div>,
                 ],
-                "className": "dialog_bottom-bar",
+                "className": "dialog__bottom-bar",
               },
               "ref": null,
               "rendered": Array [

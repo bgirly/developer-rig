@@ -21,7 +21,7 @@ export class RigConfigurationsDialog extends React.Component<RigConfigurationsDi
           <hr className="dialog__divider"/>
           <div className="rig-configurations-view__content"> {JSON.stringify(this.props.config, null, 2)} </div>
           <hr className="dialog__divider"/>
-          <div className="dialog_bottom-bar">
+          <div className="dialog__bottom-bar">
             <div className="bottom-bar__refresh" onClick={this.props.refreshConfigurationsHandler}> Refresh </div>
             <div className="bottom-bar__cancel" onClick={this.props.closeConfigurationsHandler}> Cancel </div>
           </div>
