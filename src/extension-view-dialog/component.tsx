@@ -22,6 +22,7 @@ export type ExtensionViewDialogProps = {
 export type ExtensionViewDialogState = {
   extensionViewType: ExtensionAnchor | ExtensionMode | ExtensionPlatform | ExtensionViewType;
   frameSize: string;
+  isChatEnabled: boolean;
   viewerType: string;
   x: number;
   y: number;
@@ -30,11 +31,12 @@ export type ExtensionViewDialogState = {
   identityOption: string;
   orientation: string;
   opaqueId: string;
-  [key: string]: number | string;
+  [key: string]: number | string | boolean;
 };
 
-const InitialState = {
+const InitialState: ExtensionViewDialogState = {
   extensionViewType: DefaultExtensionType,
+  isChatEnabled: false,
   frameSize: DefaultOverlaySize,
   viewerType: DefaultViewerType,
   x: 0,
@@ -141,8 +143,12 @@ export class ExtensionViewDialog extends React.Component<ExtensionViewDialogProp
     this.props.closeHandler();
   }
 
-  save = () => {
+  private save = () => {
     this.props.saveHandler(this.state);
+  }
+
+  private toggleIsChatEnabled = () => {
+    this.setState({ isChatEnabled: !this.state.isChatEnabled });
   }
 
   public render() {
@@ -301,9 +307,14 @@ export class ExtensionViewDialog extends React.Component<ExtensionViewDialogProp
               </div>
             </div>}
           <hr className="dialog__divider" />
-          <div className="dialog_bottom-bar">
-            <div className="bottom-bar__save" onClick={this.save}> Save </div>
-            <div className="bottom-bar__cancel" onClick={this.close}> Cancel </div>
+          <div className="dialog__bottom-bar">
+            <div>
+              <div className="bottom-bar__save" onClick={this.save}>Save</div>
+              <div className="bottom-bar__cancel" onClick={this.close}>Cancel</div>
+            </div>
+            <div>
+              <label><input id="isChatEnabled" type="checkbox" onChange={this.toggleIsChatEnabled} checked={this.state.isChatEnabled} />isChatEnabled</label>
+            </div>
           </div>
         </div>
       </div>
